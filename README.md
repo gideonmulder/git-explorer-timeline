@@ -1,2 +1,5 @@
 # git-explorer-timeline
-view your git repository through timeline
+WIP 
+
+# goal
+view your git repository through graphical timeline
