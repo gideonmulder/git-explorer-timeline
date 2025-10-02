@@ -1,5 +1,7 @@
 import express from 'express';
 import path from 'path';
+import configureApiHealth from './routes/health';
+import configureApiGitRepo from './routes/gitrepo';
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -8,9 +10,8 @@ const port = process.env.PORT || 5000;
 app.use(express.static(path.join(__dirname, '../../app/dist')));
 
 // API routes
-app.get('/api/health', (req, res) => {
-    res.send({ message: 'Hello from the backend!' });
-});
+configureApiHealth(app);
+configureApiGitRepo(app);
 
 // Handle all other routes and serve the frontend
 app.get('*', (req, res) => {
