@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { useGetDefaultGitRepo } from "../../application/gitdata/getDefaultGitRepo";
 import { useGitDataStorage } from "../../services/gitdata/storageAdapter"
 
@@ -6,26 +5,23 @@ export default function RepoSelector() {
     const { folder, setFolder } = useGitDataStorage();
     const { getDefaultGitRepo } = useGetDefaultGitRepo();
 
-    useEffect(() => {
-        const invoke = async() =>
-        {
-            //TODO: do you always want to load some repo?
-            if(!folder)
-            {
-                const repositoryInfo = await getDefaultGitRepo();
-                if(repositoryInfo?.currentRepoRootLocation)
-                {
-                    setFolder(() => repositoryInfo.currentRepoRootLocation);
-                }
-            }
+    const loadDefaultGitRepo = async () => {
+        const repositoryInfo = await getDefaultGitRepo();
+        if (repositoryInfo?.currentRepoRootLocation) {
+            setFolder(() => repositoryInfo.currentRepoRootLocation);
         }
-        invoke();
-    }, [getDefaultGitRepo, folder]);
+    }
 
+    if (folder) {
+        return (
+            <>
+                <span>{folder}</span><span> or </span><button> select another git repo (TODO)</button>
+            </>
+        )
+    }
     return (
         <>
-            {folder} 
-            <button>{folder ? " or select another git repo (TODO)" : "Select a git repo (TODO)" }</button>
+            <button onClick={() => loadDefaultGitRepo()}>Load current repo</button><span> or </span><button>Select a git repo (TODO)</button>
         </>
     )
 }

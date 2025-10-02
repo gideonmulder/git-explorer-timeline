@@ -1,3 +1,4 @@
+import { GitDataProvider } from "./services/gitdata/GitDataStore";
 import Menu from "./ui/common/Menu";
 import RouteConfiguration from "./ui/common/RouteConfiguration";
 
@@ -5,11 +6,11 @@ import RouteConfiguration from "./ui/common/RouteConfiguration";
 
 const App = () => {
     return (
-        <RouteConfiguration>
-
-            <Menu />
-            
-        </RouteConfiguration>
+        <GitDataProvider>
+            <RouteConfiguration>
+                <Menu />
+            </RouteConfiguration>
+        </GitDataProvider>
     );
 };
 

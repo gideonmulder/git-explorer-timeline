@@ -9,12 +9,10 @@ export default function Home() {
 
     return (
         <>
-            <GitDataProvider>
-                <RepoSelector />
-                <Timeline />
-                <FileExplorer />
-                <CompareTool />
-            </GitDataProvider>
+            <RepoSelector />
+            <Timeline />
+            <FileExplorer />
+            <CompareTool />
         </>
     )
 };
