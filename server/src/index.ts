@@ -8,7 +8,7 @@ const port = process.env.PORT || 5000;
 app.use(express.static(path.join(__dirname, '../../app/dist')));
 
 // API routes
-app.get('/api/hello', (req, res) => {
+app.get('/api/health', (req, res) => {
     res.send({ message: 'Hello from the backend!' });
 });
 
