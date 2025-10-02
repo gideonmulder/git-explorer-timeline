@@ -1,0 +1,23 @@
+.git-explorer{
+    padding:5px;
+}
+
+.git-explorer.timeline {
+    border: 1px solid var(--border-color);
+}
+
+.git-explorer.file-explorer {
+    min-width:300px;
+    max-width:calc(40% - 24px);
+    width:calc(40% - 24px);
+    display:inline-block;
+    border: 1px solid var(--border-color);
+}
+
+.git-explorer.compare-tool {
+    display:inline-block;
+    min-width: 300px;
+    width: 60%;
+    max-width: 60%;
+    border: 1px solid var(--border-color);
+}

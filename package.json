@@ -1,20 +1,20 @@
-{  
-  "name": "git-explorer-timeline",
-  "version": "0.1.0",  
-  "description": "view your git repository through graphical timeline",  
-  "scripts": {
-    "dev": "concurrently \"npm run dev:app\" \"npm run dev:server\"",
-    "dev:app": "cd app && npm run dev",
-    "dev:server": "cd server && npm run dev",
-    "build": "npm run build:app && npm run build:server",
-    "build:app": "cd app && npm run build",
-    "build:server": "cd server && npm run build",
-    "serve": "npm run build && node server/dist/index.js"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "MIT",
-  "dependencies": {
-    "concurrently": "^8.2.2"
-  }
+{
+    "name": "git-explorer-timeline",
+    "version": "0.1.0",
+    "description": "view your git repository through graphical timeline",
+    "scripts": {
+        "dev": "concurrently \"npm run dev:app\" \"npm run dev:server\"",
+        "dev:app": "cd app && npm run dev",
+        "dev:server": "cd server && npm run dev",
+        "build": "npm run build:app && npm run build:server",
+        "build:app": "cd app && npm run build",
+        "build:server": "cd server && npm run build",
+        "serve": "npm run build && node server/dist/index.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "MIT",
+    "dependencies": {
+        "concurrently": "^8.2.2"
+    }
 }
