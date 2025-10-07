@@ -1,5 +1,5 @@
 import { useCallback } from "react";
-import { RepositoryInfo } from "../../domain/repositories/entities/RepositoryInfo";
+import { RepositoryInfo } from "../../domain/repositories/entities/repositoryInfo";
 
 export const useGetDefaultGitRepo = () => {
     const getDefaultGitRepo = useCallback(async () => {
