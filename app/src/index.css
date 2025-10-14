@@ -1,6 +1,7 @@
 :root {
     --primary-bg-color:#242424;
     --primary-color:#ffffffde;
+    --primary-selected-color:yellow;
 
     --border-color:#ffffff99;
 
@@ -22,6 +23,7 @@
     :root {
         --primary-bg-color:#fff;
         --primary-color:#242424de;
+        --primary-selected-color:yellow;
         --border-color:#24242499;
     }
 }

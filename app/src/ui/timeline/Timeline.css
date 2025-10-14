@@ -1,0 +1,6 @@
+.commit{
+    color:var(--primary-color);
+}
+.commit.selected{
+    color:var(--primary-selected-color);
+}

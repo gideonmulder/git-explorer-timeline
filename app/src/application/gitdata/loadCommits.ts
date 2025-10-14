@@ -9,7 +9,7 @@ export const useLoadCommits = () => {
     const { invokeGitCommand } = useInvokeGitCommand();
 
     const loadCommits = useCallback(async () => {
-        const logResult = await invokeGitCommand("log");
+        const logResult = await invokeGitCommand(`log`);
         if (logResult) {
             const lines = logResult.split("\n");
             let allCommits: Commit[] = [];
