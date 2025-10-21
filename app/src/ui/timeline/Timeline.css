@@ -4,3 +4,13 @@
 .commit.selected{
     color:var(--primary-selected-color);
 }
+
+.dot {
+    fill: none;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    stroke-width: 5px;
+    transition: all .3s ease;
+    opacity: 0.5;
+    stroke: red;
+}
